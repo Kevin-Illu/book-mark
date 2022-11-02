@@ -14,7 +14,6 @@ function createWindow() {
   })
 
   ipcMain.on('btn-event', (e, action) => {
-
     const actions = {
       maximize: () => win.maximize(),
       minimize: () => win.minimize(),

@@ -1,24 +1,23 @@
-import Header from "./components/Header.js";
+import { html_main } from './layouts.js';
+import NavBar from './Components/NavBar.js';
 
-class MainApp {
+class App {
   constructor() {
-    this.root = document.querySelector('#root');
-    this.layout = `
-    <div id="container">
-      <header id="Header">h</header>
-      <main id="Main">m</main>
-      <footer id="Footer">f</footer>
-    </main>`;
-    this.root.innerHTML = this.layout;
-
-    this.header = new Header(root);
+    this.parent = document.querySelector('#root');
+    this.layout = html_main;
+    this.toolbar = new NavBar('#navbar');
   }
 
-  run() {
-    console.log('runing');
+  render = () => {
+    this.parent.innerHTML = this.layout;
+  }
+
+  run = () => {
+    this.render();
+    this.toolbar.render();
   }
 }
 
 
-const main = new MainApp();
-main.run();
+const app = new App();
+app.run();
