@@ -5,7 +5,7 @@ class App {
   constructor() {
     this.parent = document.querySelector('#root');
     this.layout = html_main;
-    this.toolbar = new NavBar('#navbar');
+    this.navbar = new NavBar('#navbar');
   }
 
   render = () => {
@@ -14,7 +14,7 @@ class App {
 
   run = () => {
     this.render();
-    this.toolbar.render();
+    this.navbar.render();
   }
 }
 
