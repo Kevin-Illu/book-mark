@@ -10,7 +10,7 @@ class TrafficLight {
     this.icon;
   }
 
-  onPress = () => window.api.trafficLights(this?.actionName);
+  onPress = () => window.api.trafficLights(this.actionName);
 
   render = () => {
     const container = document.querySelector(this._parent);
